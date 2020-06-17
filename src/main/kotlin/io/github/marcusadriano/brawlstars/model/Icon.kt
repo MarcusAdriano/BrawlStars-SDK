@@ -1,4 +1,4 @@
-package io.github.marcusadriano.model
+package io.github.marcusadriano.brawlstars.model
 
 import com.google.gson.annotations.SerializedName
 

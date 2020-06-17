@@ -1,4 +1,4 @@
-package io.github.marcusadriano.model
+package io.github.marcusadriano.brawlstars.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -16,12 +16,12 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class Brawler (
 
-	@SerializedName("starPowers") val starPowers : List<StarPower>,
-	@SerializedName("gadgets") val gadgets : List<Gadget>,
-	@SerializedName("id") val id : Int,
-	@SerializedName("rank") val rank : Int,
-	@SerializedName("trophies") val trophies : Int,
-	@SerializedName("highestTrophies") val highestTrophies : Int,
-	@SerializedName("power") val power : Int,
-	@SerializedName("name") val name : String
+        @SerializedName("starPowers") val starPowers : List<StarPower>,
+        @SerializedName("gadgets") val gadgets : List<Gadget>,
+        @SerializedName("id") val id : Int,
+        @SerializedName("rank") val rank : Int,
+        @SerializedName("trophies") val trophies : Int,
+        @SerializedName("highestTrophies") val highestTrophies : Int,
+        @SerializedName("power") val power : Int,
+        @SerializedName("name") val name : String
 )

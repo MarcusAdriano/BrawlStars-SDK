@@ -1,4 +1,4 @@
-package io.github.marcusadriano.model
+package io.github.marcusadriano.brawlstars.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -16,7 +16,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class Items (
 
-	@SerializedName("battleTime") val battleTime : String,
-	@SerializedName("event") val event : Event,
-	@SerializedName("battle") val battle : Battle
+        @SerializedName("battleTime") val battleTime : String,
+        @SerializedName("event") val event : Event,
+        @SerializedName("battle") val battle : Battle
 )
