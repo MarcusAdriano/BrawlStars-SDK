@@ -22,7 +22,7 @@ public class MainJavaExample {
     public static void main(String[] args) {
         BrawlStars.setup(args[0]);
         BrawlStarsService service = BrawlStars.service();
-        Result<Player> result = service.player("#9UV9UG90");
+        Result<Player> result = service.player("#9UV9UG9J");
 
         System.out.println(printResult.apply(result));
     }
