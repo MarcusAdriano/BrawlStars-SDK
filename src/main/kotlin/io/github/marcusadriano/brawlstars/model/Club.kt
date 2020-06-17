@@ -14,8 +14,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Club (
+data class Club(
 
-	@SerializedName("tag") val tag : String,
-	@SerializedName("name") val name : String
+    @SerializedName("tag") val tag: String,
+    @SerializedName("name") val name: String
 )

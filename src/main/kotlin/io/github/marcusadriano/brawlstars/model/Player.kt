@@ -14,24 +14,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Player (
+data class Player(
 
-        @SerializedName("club") val club : Club,
-        @SerializedName("isQualifiedFromChampionshipChallenge") val isQualifiedFromChampionshipChallenge : Boolean,
-        @SerializedName("3vs3Victories") val vs3Victories : Int,
-        @SerializedName("icon") val icon : Icon,
-        @SerializedName("tag") val tag : String,
-        @SerializedName("name") val name : String,
-        @SerializedName("trophies") val trophies : Int,
-        @SerializedName("expLevel") val expLevel : Int,
-        @SerializedName("expPoints") val expPoints : Int,
-        @SerializedName("highestTrophies") val highestTrophies : Int,
-        @SerializedName("powerPlayPoints") val powerPlayPoints : Int,
-        @SerializedName("highestPowerPlayPoints") val highestPowerPlayPoints : Int,
-        @SerializedName("soloVictories") val soloVictories : Int,
-        @SerializedName("duoVictories") val duoVictories : Int,
-        @SerializedName("bestRoboRumbleTime") val bestRoboRumbleTime : Int,
-        @SerializedName("bestTimeAsBigBrawler") val bestTimeAsBigBrawler : Int,
-        @SerializedName("brawlers") val brawlers : List<Brawler>,
-        @SerializedName("nameColor") val nameColor : String
+    @SerializedName("club") val club: Club,
+    @SerializedName("isQualifiedFromChampionshipChallenge") val isQualifiedFromChampionshipChallenge: Boolean,
+    @SerializedName("3vs3Victories") val vs3Victories: Int,
+    @SerializedName("icon") val icon: Icon,
+    @SerializedName("tag") val tag: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("trophies") val trophies: Int,
+    @SerializedName("expLevel") val expLevel: Int,
+    @SerializedName("expPoints") val expPoints: Int,
+    @SerializedName("highestTrophies") val highestTrophies: Int,
+    @SerializedName("powerPlayPoints") val powerPlayPoints: Int,
+    @SerializedName("highestPowerPlayPoints") val highestPowerPlayPoints: Int,
+    @SerializedName("soloVictories") val soloVictories: Int,
+    @SerializedName("duoVictories") val duoVictories: Int,
+    @SerializedName("bestRoboRumbleTime") val bestRoboRumbleTime: Int,
+    @SerializedName("bestTimeAsBigBrawler") val bestTimeAsBigBrawler: Int,
+    @SerializedName("brawlers") val brawlers: List<Brawler>,
+    @SerializedName("nameColor") val nameColor: String
 )

@@ -14,8 +14,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class StarPower (
+data class StarPower(
 
-	@SerializedName("name") val name : String,
-	@SerializedName("id") val id : Int
+    @SerializedName("name") val name: String,
+    @SerializedName("id") val id: Int
 )

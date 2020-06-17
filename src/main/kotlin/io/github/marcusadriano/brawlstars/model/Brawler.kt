@@ -14,14 +14,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Brawler (
+data class Brawler(
 
-        @SerializedName("starPowers") val starPowers : List<StarPower>,
-        @SerializedName("gadgets") val gadgets : List<Gadget>,
-        @SerializedName("id") val id : Int,
-        @SerializedName("rank") val rank : Int,
-        @SerializedName("trophies") val trophies : Int,
-        @SerializedName("highestTrophies") val highestTrophies : Int,
-        @SerializedName("power") val power : Int,
-        @SerializedName("name") val name : String
+    @SerializedName("starPowers") val starPowers: List<StarPower>,
+    @SerializedName("gadgets") val gadgets: List<Gadget>,
+    @SerializedName("id") val id: Int,
+    @SerializedName("rank") val rank: Int,
+    @SerializedName("trophies") val trophies: Int,
+    @SerializedName("highestTrophies") val highestTrophies: Int,
+    @SerializedName("power") val power: Int,
+    @SerializedName("name") val name: String
 )

@@ -14,9 +14,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Event (
+data class Event(
 
-	@SerializedName("id") val id : Int,
-	@SerializedName("mode") val mode : String,
-	@SerializedName("map") val map : String
+    @SerializedName("id") val id: Int,
+    @SerializedName("mode") val mode: String,
+    @SerializedName("map") val map: String
 )

@@ -14,9 +14,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Items (
+data class Items(
 
-        @SerializedName("battleTime") val battleTime : String,
-        @SerializedName("event") val event : Event,
-        @SerializedName("battle") val battle : Battle
+    @SerializedName("battleTime") val battleTime: String,
+    @SerializedName("event") val event: Event,
+    @SerializedName("battle") val battle: Battle
 )

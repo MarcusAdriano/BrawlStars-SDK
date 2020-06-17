@@ -14,11 +14,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Battle (
+data class Battle(
 
-	@SerializedName("mode") val mode : String,
-	@SerializedName("type") val type : String,
-	@SerializedName("rank") val rank : Int,
-	@SerializedName("trophyChange") val trophyChange : Int,
-	@SerializedName("teams") val teams : List<List<Teams>>
+    @SerializedName("mode") val mode: String,
+    @SerializedName("type") val type: String,
+    @SerializedName("rank") val rank: Int,
+    @SerializedName("trophyChange") val trophyChange: Int,
+    @SerializedName("teams") val teams: List<List<Teams>>
 )

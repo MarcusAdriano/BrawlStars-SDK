@@ -14,9 +14,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Teams (
+data class Teams(
 
-	@SerializedName("tag") val tag : String,
-	@SerializedName("name") val name : String,
-	@SerializedName("brawler") val brawler : Brawler
+    @SerializedName("tag") val tag: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("brawler") val brawler: Brawler
 )
