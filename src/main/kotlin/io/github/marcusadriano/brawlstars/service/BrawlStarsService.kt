@@ -1,8 +1,8 @@
-package io.github.marcusadriano.service
+package io.github.marcusadriano.brawlstars.service
 
-import io.github.marcusadriano.model.BattleLog
-import io.github.marcusadriano.model.Player
-import io.github.marcusadriano.model.Result
+import io.github.marcusadriano.brawlstars.model.BattleLog
+import io.github.marcusadriano.brawlstars.model.Player
+import io.github.marcusadriano.brawlstars.model.Result
 
 interface BrawlStarsService {
 
