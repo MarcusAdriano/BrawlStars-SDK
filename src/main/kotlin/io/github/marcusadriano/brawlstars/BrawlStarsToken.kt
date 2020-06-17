@@ -1,6 +1,6 @@
 package io.github.marcusadriano.brawlstars
 
-inline class BSToken(private val value: String) {
+inline class BrawlStarsToken(private val value: String) {
 
     val bearer: String
         get() = this.value
