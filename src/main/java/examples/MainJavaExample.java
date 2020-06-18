@@ -1,4 +1,4 @@
-package io.github.marcusadriano.brawlstars.example;
+package examples;
 
 import io.github.marcusadriano.brawlstars.BrawlStars;
 import io.github.marcusadriano.brawlstars.model.Player;
