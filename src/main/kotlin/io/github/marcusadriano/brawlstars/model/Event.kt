@@ -16,7 +16,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class Event(
 
-    @SerializedName("id") val id: Int,
-    @SerializedName("mode") val mode: String,
-    @SerializedName("map") val map: String
+    @SerializedName("id") val id: Int?,
+    @SerializedName("mode") val mode: String?,
+    @SerializedName("map") val map: String?
 )

@@ -16,9 +16,18 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class Battle(
 
-    @SerializedName("mode") val mode: String,
-    @SerializedName("type") val type: String,
-    @SerializedName("rank") val rank: Int,
-    @SerializedName("trophyChange") val trophyChange: Int,
-    @SerializedName("teams") val teams: List<List<Teams>>
+    @SerializedName("mode") val mode: String?,
+    @SerializedName("type") val type: String?,
+    @SerializedName("rank") val rank: Int?,
+    @SerializedName("result") val result: String?,
+    @SerializedName("trophyChange") val trophyChange: Int?,
+    @SerializedName("starPlayer") val starPlayer: StarPlayer?,
+    @SerializedName("teams") val teams: List<List<Teams>>?
+)
+
+data class StarPlayer(
+
+    @SerializedName("tag") val tag: String?,
+    @SerializedName("name") val name: String?,
+    @SerializedName("brawler") val brawler: Brawler?
 )

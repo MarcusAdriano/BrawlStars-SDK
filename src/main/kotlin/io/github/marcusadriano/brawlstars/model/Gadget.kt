@@ -16,6 +16,6 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class Gadget(
 
-    @SerializedName("name") val name: String,
-    @SerializedName("id") val id: Int
+    @SerializedName("name") val name: String?,
+    @SerializedName("id") val id: Int?
 )

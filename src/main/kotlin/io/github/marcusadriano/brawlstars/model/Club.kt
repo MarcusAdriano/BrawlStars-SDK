@@ -16,6 +16,6 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class Club(
 
-    @SerializedName("tag") val tag: String,
-    @SerializedName("name") val name: String
+    @SerializedName("tag") val tag: String?,
+    @SerializedName("name") val name: String?
 )

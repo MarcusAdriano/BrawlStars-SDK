@@ -16,5 +16,5 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class BattleLog(
 
-    @SerializedName("items") val items: List<Items>
+    @SerializedName("items") val items: List<Items>?
 )
