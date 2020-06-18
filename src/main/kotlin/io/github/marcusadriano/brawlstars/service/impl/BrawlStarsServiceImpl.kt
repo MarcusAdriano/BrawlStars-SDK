@@ -1,8 +1,8 @@
 package io.github.marcusadriano.brawlstars.service.impl
 
 import com.google.gson.Gson
-import io.github.marcusadriano.brawlstars.BrawlStarsAuthInterceptor
-import io.github.marcusadriano.brawlstars.BrawlStarsToken
+import io.github.marcusadriano.brawlstars.support.BrawlStarsAuthInterceptor
+import io.github.marcusadriano.brawlstars.model.BrawlStarsToken
 import io.github.marcusadriano.brawlstars.model.BattleLog
 import io.github.marcusadriano.brawlstars.model.Error
 import io.github.marcusadriano.brawlstars.model.Player
@@ -20,7 +20,8 @@ internal class BrawlStarsServiceImpl(token: BrawlStarsToken) : BrawlStarsService
     private val api: BrawlStarsServiceApi
 
     init {
-        val tokenInterceptor = BrawlStarsAuthInterceptor(token)
+        val tokenInterceptor =
+            BrawlStarsAuthInterceptor(token)
 
         val okHttpClient = OkHttpClient.Builder()
             .addInterceptor(tokenInterceptor)
