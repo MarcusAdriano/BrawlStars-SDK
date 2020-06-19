@@ -1,39 +1,15 @@
 package io.github.marcusadriano.brawlstars.service.impl
 
 import com.google.gson.Gson
-import io.github.marcusadriano.brawlstars.support.BrawlStarsAuthInterceptor
-import io.github.marcusadriano.brawlstars.model.BrawlStarsToken
 import io.github.marcusadriano.brawlstars.model.BattleLog
 import io.github.marcusadriano.brawlstars.model.Error
 import io.github.marcusadriano.brawlstars.model.Player
 import io.github.marcusadriano.brawlstars.model.Result
 import io.github.marcusadriano.brawlstars.service.BrawlStarsService
 import io.github.marcusadriano.brawlstars.service.BrawlStarsServiceApi
-import okhttp3.OkHttpClient
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
-internal class BrawlStarsServiceImpl(token: BrawlStarsToken) : BrawlStarsService {
-
-    private val retrofit: Retrofit
-    private val api: BrawlStarsServiceApi
-
-    init {
-        val tokenInterceptor =
-            BrawlStarsAuthInterceptor(token)
-
-        val okHttpClient = OkHttpClient.Builder()
-            .addInterceptor(tokenInterceptor)
-            .build()
-
-        retrofit = Retrofit.Builder()
-            .client(okHttpClient)
-            .baseUrl("https://api.brawlstars.com/v1/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        api = retrofit.create(BrawlStarsServiceApi::class.java)
-    }
+internal class BrawlStarsServiceImpl(private val api: BrawlStarsServiceApi) : BrawlStarsService {
 
     protected fun <T> parseResult(response: Response<T>): Result<T> {
         if (response.isSuccessful) {

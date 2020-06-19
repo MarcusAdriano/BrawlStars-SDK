@@ -1,6 +1,5 @@
-package io.github.marcusadriano.brawlstars.support
+package io.github.marcusadriano.brawlstars.model
 
-import io.github.marcusadriano.brawlstars.model.BrawlStarsToken
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
