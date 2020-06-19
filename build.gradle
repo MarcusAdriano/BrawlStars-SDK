@@ -29,6 +29,7 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             limit {
+                includes = ['io.github.marcusadriano.brawlstars.service.*']
                 minimum = 0.85
             }
         }
@@ -40,11 +41,8 @@ jacocoTestReport {
     dependsOn jacocoTestCoverageVerification
     reports {
         xml.enabled true
+        csv.enabled false
     }
-}
-
-build {
-    finalizedBy jacocoTestReport
 }
 
 dependencies {

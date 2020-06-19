@@ -6,7 +6,7 @@ dist: trusty
 jdk: oraclejdk8
 
 script:
-  - ./gradlew build
+  - ./gradlew build jacocoTestReport
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
