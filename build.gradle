@@ -37,8 +37,8 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
+                'examples/*',
                 'io/github/marcusadriano/brawlstars/model/*',
-                'io/github/marcusadriano/brawlstars/examples/**',
                 'io/github/marcusadriano/brawlstars/BrawlStars.kt'
             ])
         }))
