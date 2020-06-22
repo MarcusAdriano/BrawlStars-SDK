@@ -12,16 +12,7 @@ repositories {
     jcenter()
 }
 
-def jacocoExcludes = [
-    'examples/**',
-    'io.github.marcusadriano.brawlstars.model.*',
-    'io.github.marcusadriano.brawlstars.BrawlStars.kt'
-]
-
 test {
-    jacoco {
-        excludes = jacocoExcludes
-    }
     useJUnitPlatform()
 }
 
@@ -29,7 +20,6 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             limit {
-                includes = ['io.github.marcusadriano.brawlstars.service.*']
                 minimum = 0.85
             }
         }
@@ -42,7 +32,27 @@ jacocoTestReport {
     reports {
         xml.enabled true
         csv.enabled false
+        html.enabled true
     }
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                'io/github/marcusadriano/brawlstars/model/*',
+                'io/github/marcusadriano/brawlstars/examples/**',
+                'io/github/marcusadriano/brawlstars/BrawlStars.kt'
+            ])
+        }))
+    }
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions {
+        freeCompilerArgs = ["-Xinline-classes", "-Xjvm-default=compatibility"]
+    }
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 dependencies {
@@ -56,14 +66,4 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.0'
     testImplementation group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
-}
-
-compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-    kotlinOptions {
-        freeCompilerArgs = ["-Xinline-classes", "-Xjvm-default=compatibility"]
-    }
-}
-compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
 }
