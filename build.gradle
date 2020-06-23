@@ -13,6 +13,18 @@ repositories {
 }
 
 test {
+    exclude 'io/github/marcusadriano/brawlstars/model/**'
+    exclude 'io/github/marcusadriano/brawlstars/examples/**'
+
+    // listen to events in the test execution lifecycle
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+    }
+
+    onOutput { descriptor, event ->
+        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
+    }
+
     useJUnitPlatform()
 }
 
@@ -38,8 +50,7 @@ jacocoTestReport {
         classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
                 'io/github/marcusadriano/brawlstars/examples/**',
-                'io/github/marcusadriano/brawlstars/model/*',
-                'io/github/marcusadriano/brawlstars/BrawlStars.kt'
+                'io/github/marcusadriano/brawlstars/model/**'
             ])
         }))
     }

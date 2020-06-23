@@ -35,7 +35,7 @@ internal class BrawlStarsServiceImplTest {
     }
 
     @Test
-    fun shouldGetPlayerInfos() {
+    fun `should get Player Info`() {
         val result: Result<Player> = service.player("#test")
         assertTrue(result is Result.Success<Player>)
         when(result) {
@@ -52,7 +52,7 @@ internal class BrawlStarsServiceImplTest {
     }
 
     @Test
-    fun shouldGetErrorNotFound() {
+    fun `should get Error on Player request`() {
         Mockito.reset(bsapi)
         `when`(bsapi.player(anyString())).thenReturn(Calls.response(PlayerHttpMockResponses.notFound<Player>()))
         val result: Result<Player> = service.player("#test")
@@ -68,7 +68,7 @@ internal class BrawlStarsServiceImplTest {
     }
 
     @Test
-    fun shouldGetPlayerBattleLog() {
+    fun `should get BattleLog info`() {
         val result: Result<BattleLog> = service.battleLog("#test")
         assertTrue(result is Result.Success<BattleLog>)
         when(result) {
@@ -83,10 +83,10 @@ internal class BrawlStarsServiceImplTest {
     }
 
     @Test
-    fun shouldGetErrorNotFoundBattleLog() {
+    fun `should get Error on BattleLog request`() {
         Mockito.reset(bsapi)
         `when`(bsapi.battleLog(anyString())).thenReturn(Calls.response(PlayerHttpMockResponses.notFound<BattleLog>()))
-        val result: Result<Player> = service.player("#test")
+        val result: Result<BattleLog> = service.battleLog("#test")
         assertTrue(result is Result.Error)
         when (result) {
             is Result.Error -> {

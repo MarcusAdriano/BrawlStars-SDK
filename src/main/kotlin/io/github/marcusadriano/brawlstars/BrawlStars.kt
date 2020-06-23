@@ -1,14 +1,13 @@
 package io.github.marcusadriano.brawlstars
 
+import io.github.marcusadriano.brawlstars.model.BrawlStarsAuthInterceptor
 import io.github.marcusadriano.brawlstars.model.BrawlStarsToken
 import io.github.marcusadriano.brawlstars.service.BrawlStarsService
 import io.github.marcusadriano.brawlstars.service.BrawlStarsServiceApi
 import io.github.marcusadriano.brawlstars.service.impl.BrawlStarsServiceImpl
-import io.github.marcusadriano.brawlstars.model.BrawlStarsAuthInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.RuntimeException
 
 object BrawlStars {
 
