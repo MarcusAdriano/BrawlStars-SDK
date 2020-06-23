@@ -13,9 +13,6 @@ repositories {
 }
 
 test {
-    exclude 'io/github/marcusadriano/brawlstars/model/**'
-    exclude 'io/github/marcusadriano/brawlstars/examples/**'
-
     // listen to events in the test execution lifecycle
     beforeTest { descriptor ->
         logger.lifecycle("Running test: " + descriptor)
@@ -28,10 +25,21 @@ test {
     useJUnitPlatform()
 }
 
+def jacocoExcludes = [
+    'io/github/marcusadriano/brawlstars/model/**'
+]
+
+def jacocoRulesExcludes = [
+        'io.github.marcusadriano.brawlstars.model.**'
+]
+
 jacocoTestCoverageVerification {
     violationRules {
         rule {
+            element = 'METHOD'
+            excludes = jacocoRulesExcludes
             limit {
+                counter = 'BRANCH'
                 minimum = 0.9
             }
         }
@@ -39,8 +47,6 @@ jacocoTestCoverageVerification {
 }
 
 jacocoTestReport {
-    dependsOn test
-    dependsOn jacocoTestCoverageVerification
     reports {
         xml.enabled true
         csv.enabled false
@@ -48,12 +54,14 @@ jacocoTestReport {
     }
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
-            fileTree(dir: it, exclude: [
-                'io/github/marcusadriano/brawlstars/examples/**',
-                'io/github/marcusadriano/brawlstars/model/**'
-            ])
+            fileTree(dir: it, exclude: jacocoExcludes)
         }))
     }
+}
+
+check {
+    dependsOn jacocoTestCoverageVerification
+    dependsOn jacocoTestReport
 }
 
 compileKotlin {
