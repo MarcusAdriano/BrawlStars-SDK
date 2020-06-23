@@ -1,4 +1,4 @@
-package io.github.marcusadriano.brawlstars
+package io.github.marcusadriano.brawlstars.model
 
 import okhttp3.Interceptor
 import okhttp3.Request
@@ -9,7 +9,6 @@ internal class BrawlStarsAuthInterceptor(val token: BrawlStarsToken) : Intercept
     companion object {
         const val AUTHORIZATION = "Authorization"
     }
-
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
