@@ -16,8 +16,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class Brawler(
 
-    @SerializedName("starPowers") val starPowers: List<StarPower>?,
-    @SerializedName("gadgets") val gadgets: List<Gadget>?,
+    @SerializedName("starPowers") val starPowers: List<Item>?,
+    @SerializedName("gadgets") val gadgets: List<Item>?,
     @SerializedName("id") val id: Int?,
     @SerializedName("rank") val rank: Int?,
     @SerializedName("trophies") val trophies: Int?,
