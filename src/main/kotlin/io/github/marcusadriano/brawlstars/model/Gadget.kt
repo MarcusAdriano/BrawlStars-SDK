@@ -1,7 +1,5 @@
 package io.github.marcusadriano.brawlstars.model
 
-import com.google.gson.annotations.SerializedName
-
 /*
 Copyright (c) 2020 Kotlin Data Classes Generated from JSON powered by http://www.json2kotlin.com
 
@@ -14,8 +12,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Gadget(
-
-    @SerializedName("name") val name: String?,
-    @SerializedName("id") val id: Int?
-)
+data class Gadget(override val id: Int, override val name: String) : Item(id, name)
